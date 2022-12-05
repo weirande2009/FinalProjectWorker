@@ -1,6 +1,5 @@
 import socket
 import torch
-import time
 from Worker import Worker
 # model = torch.hub.load('pytorch/vision:v0.10.0', 'googlenet', pretrained=True)
 
@@ -18,7 +17,7 @@ class Server:
         self.worker = Worker()
 
     def working(self):
-        pass
+
 
     def receive_all(self, length):
         """
@@ -37,25 +36,7 @@ class Server:
             length -= len(new_buf)
         return buf
 
-class ProcessorPool:
 
-    def __init__(self, num):
-        self.workerNum = num  # have num workers in total
-        self.workerList = [Worker() for i in range(num)]
-        self.temporaryStore = ""
-
-    def callAWorker(self, str_data):
-        self.temporaryStore = str_data
-
-        while True:
-            for worker in self.workerList:
-                if not worker.isOccupied:  # if this worker is not occupied
-                    return worker.recognize(str_data)  # return result from the worker
-
-            # all workers are currently occupied
-            # wait for 3 sec before calling a worker again
-            print("all workers are currently occupied...")
-            time.sleep(3.0)
 
 
 # def main():
