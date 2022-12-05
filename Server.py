@@ -17,7 +17,7 @@ class Server:
         self.worker = Worker()
 
     def working(self):
-
+        pass
 
     def receive_all(self, length):
         """
