@@ -1,60 +1,65 @@
 import socket
-import torch
+import numpy as np
 from Worker import Worker
-# model = torch.hub.load('pytorch/vision:v0.10.0', 'googlenet', pretrained=True)
 
 
 class Server:
     DATA_SIZE_LENGTH = 16
 
-    def __init__(self, port: int):
+    def __init__(self, ip: str, port: int):
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.sock.bind(("localhost", port))
+        self.sock.bind((ip, port))
         self.sock.listen(True)
-        # wait for connection
-        client_sock, client_address = self.sock.accept()
         # image recognition worker
         self.worker = Worker()
 
-    def working(self):
-        pass
+    def start(self):
+        # wait for connection
 
-    def receive_all(self, length):
+        while True:
+            try:
+                client_sock, client_address = self.sock.accept()
+                print(client_address)
+                self.listen(client_sock)
+            except:
+                print("WebServer disconnects")
+                continue
+
+    def listen(self, client_sock):
+        """
+        Wait for connection from webserver and image
+        :return:
+        """
+        # receive data
+        height = int(self.receive_all(client_sock))
+        width = int(self.receive_all(client_sock))
+        data = self.receive_all(client_sock)
+        # convert data to numpy
+        image = np.frombuffer(data, dtype='uint8')
+        image = image.reshape([height, width, 3])
+        # recognize image
+        name = self.worker.recognize(image)
+        # send to client
+        self.send(client_sock, name.encode())
+
+    def receive_all(self, client, length=-1):
         """
         Receive all data from worker
+        :param client: target client
         :param length: bytes number
         :return: the received data
         """
         if length == -1:
-            length = int(self.receive_all(self.DATA_SIZE_LENGTH))
+            length = int(self.receive_all(client, self.DATA_SIZE_LENGTH))
         buf = b''
         while length:
-            new_buf = self.sock.recv(length)
+            new_buf = client.recv(length)
             if not new_buf:
                 return None
             buf += new_buf
             length -= len(new_buf)
         return buf
 
-
-# def main():
-#     ip = 'localhost'
-#     port = 6002
-#
-#     # 初始化socket，设置为监听状态
-#     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#     s.bind((ip, port))
-#     s.listen(True)
-#
-#     # 等待并接收数据
-#     conn, address = s.accept()
-#     length = receive_all(conn, 16)
-#     str_data = receive_all(conn, int(length))
-#     s.close()
-#
-#     # 接收二进制数据流解码
-#     data = np.fromstring(str_data, dtype='uint8')
-#     decode_img = cv2.imdecode(data, 1)
-#     cv2.imshow('serve', decode_img)
-#     cv2.waitKey(0)
-#     cv2.destroyAllWindows()
+    def send(self, client, data: bytes):
+        client.send(str(len(data)).ljust(self.DATA_SIZE_LENGTH).encode())
+        client.send(data)
