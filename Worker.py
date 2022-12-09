@@ -13,9 +13,10 @@ class Worker:
         self.model.eval()
         with open("imagenet_classes.txt", "r") as f:
             self.categories = [s.strip() for s in f.readlines()]
+        self.image_num = 0
 
     def recognize(self, image) -> str:
-        image = cv2.resize(image, (224, 224), interpolation=cv2.INTER_AREA)
+        # cv2.imwrite("image"+str(self.image_num)+".png", image)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         image = torch.from_numpy(image)
         image = image.to(torch.float)
