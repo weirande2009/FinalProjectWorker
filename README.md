@@ -6,5 +6,5 @@ make sure that you have reserved GENI resources by file Rspec
 4. source worker/bin/activate
 5. cd worker
 6. cd FinalProjectWorker
-7. python3 main.py 10.10.x.1 35410 (where 10.10.x.1 is the ip address of the worker)
+7. nohup python3 main.py 10.10.x.1 35410 (where 10.10.x.1 is the ip address of the worker)
 
