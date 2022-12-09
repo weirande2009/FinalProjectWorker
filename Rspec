@@ -1,0 +1,120 @@
+<rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node-0" component_id="urn:publicid:IDN+instageni.ucsd.edu+node+pc4" component_manager_id="urn:publicid:IDN+instageni.ucsd.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79305">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27810" username="weiran22"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27810" username="lei"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27810" username="ctony"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27810" username="matta"/>
+      <emulab:console server="pc4.instageni.ucsd.edu"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-0" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" mac_address="02d523c7a3f5" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79312">
+      <ip address="10.10.1.1" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm4-26"/>
+    <host name="node-0.RanWeiFinalProject.ch-geni-net.instageni.ucsd.edu"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node-1" component_id="urn:publicid:IDN+instageni.ucsd.edu+node+pc4" component_manager_id="urn:publicid:IDN+instageni.ucsd.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79306">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27811" username="weiran22"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27811" username="lei"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27811" username="ctony"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27811" username="matta"/>
+      <emulab:console server="pc4.instageni.ucsd.edu"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-2" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" mac_address="02d4dd47c09c" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79315">
+      <ip address="10.10.2.1" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm4-27"/>
+    <host name="node-1.RanWeiFinalProject.ch-geni-net.instageni.ucsd.edu"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node-2" component_id="urn:publicid:IDN+instageni.ucsd.edu+node+pc4" component_manager_id="urn:publicid:IDN+instageni.ucsd.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79307">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27812" username="weiran22"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27812" username="lei"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27812" username="ctony"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27812" username="matta"/>
+      <emulab:console server="pc4.instageni.ucsd.edu"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-4" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" mac_address="02c1c5aaa1f8" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79318">
+      <ip address="10.10.3.1" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm4-28"/>
+    <host name="node-2.RanWeiFinalProject.ch-geni-net.instageni.ucsd.edu"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node-3" component_id="urn:publicid:IDN+instageni.ucsd.edu+node+pc4" component_manager_id="urn:publicid:IDN+instageni.ucsd.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79308">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27813" username="weiran22"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27813" username="lei"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27813" username="ctony"/>
+      <login authentication="ssh-keys" hostname="pc4.instageni.ucsd.edu" port="27813" username="matta"/>
+      <emulab:console server="pc4.instageni.ucsd.edu"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-6" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" mac_address="023f16fa8b15" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79321">
+      <ip address="10.10.4.1" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm4-29"/>
+    <host name="node-3.RanWeiFinalProject.ch-geni-net.instageni.ucsd.edu"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="webserver" component_id="urn:publicid:IDN+instageni.ucsd.edu+node+pc4" component_manager_id="urn:publicid:IDN+instageni.ucsd.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79309">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <routable_control_ip xmlns="http://www.protogeni.net/resources/rspec/ext/emulab/1"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <login authentication="ssh-keys" hostname="pcvm4-30.instageni.ucsd.edu" port="22" username="weiran22"/>
+      <login authentication="ssh-keys" hostname="pcvm4-30.instageni.ucsd.edu" port="22" username="lei"/>
+      <login authentication="ssh-keys" hostname="pcvm4-30.instageni.ucsd.edu" port="22" username="ctony"/>
+      <login authentication="ssh-keys" hostname="pcvm4-30.instageni.ucsd.edu" port="22" username="matta"/>
+      <emulab:console server="pcvm4-30.instageni.ucsd.edu"/>
+      <emulab:imageable available="true"/>
+    </services>
+    <interface client_id="interface-1" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" mac_address="020fa4a88cc4" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79313">
+      <ip address="10.10.1.2" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-3" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" mac_address="0201686723c5" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79316">
+      <ip address="10.10.2.2" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-5" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" mac_address="02a4d3cbe041" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79319">
+      <ip address="10.10.3.2" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-7" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" mac_address="0277a8a4317d" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79322">
+      <ip address="10.10.4.2" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm4-30"/>
+    <host ipv4="137.110.252.74" name="webserver.RanWeiFinalProject.ch-geni-net.instageni.ucsd.edu"/>
+  </node>
+  <link client_id="link-0" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79311">
+    <interface_ref client_id="interface-0" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79312"/>
+    <interface_ref client_id="interface-1" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79313"/>
+    <component_manager name="urn:publicid:IDN+instageni.ucsd.edu+authority+cm"/>
+  </link>
+  <link client_id="link-1" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79314">
+    <interface_ref client_id="interface-2" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79315"/>
+    <interface_ref client_id="interface-3" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79316"/>
+    <component_manager name="urn:publicid:IDN+instageni.ucsd.edu+authority+cm"/>
+  </link>
+  <link client_id="link-2" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79317">
+    <interface_ref client_id="interface-4" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79318"/>
+    <interface_ref client_id="interface-5" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79319"/>
+    <component_manager name="urn:publicid:IDN+instageni.ucsd.edu+authority+cm"/>
+  </link>
+  <link client_id="link-3" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79320">
+    <interface_ref client_id="interface-6" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79321"/>
+    <interface_ref client_id="interface-7" component_id="urn:publicid:IDN+instageni.ucsd.edu+interface+pc4:lo0" sliver_id="urn:publicid:IDN+instageni.ucsd.edu+sliver+79322"/>
+    <component_manager name="urn:publicid:IDN+instageni.ucsd.edu+authority+cm"/>
+  </link>
+  <rs:site_info xmlns:rs="http://www.protogeni.net/resources/rspec/ext/site-info/1">
+    <rs:location country="" latitude="32.888" longitude="-117.239"/>
+  </rs:site_info>
+</rspec>
