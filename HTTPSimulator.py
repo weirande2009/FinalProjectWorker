@@ -26,7 +26,7 @@ def send_requests(thread_num, request_times):
 
 
 def start_threads():
-    thread_num = 50
+    thread_num = 1
     request_times = 10
     threads = []
     begin_time = time.time()

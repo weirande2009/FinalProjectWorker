@@ -36,18 +36,26 @@ def test_image_size(image_names):
 
 
 def test_difference_location(image_name):
-    pass
-
-
-def test_concurrency():
     rtt = np.array([2.7809300422668457, 5.328959941864014, 6.47007372379303, 7.278146815299988])
-    num = np.array([10, 20, 30, 40])
+    distance = np.array([10, 20, 30, 40])
     # image 1
     plt.title("RTT and concurrent request")
-    plt.plot(num, rtt*1000)
+    plt.plot(distance, rtt * 1000)
     plt.xlabel('concurrent request')
     plt.ylabel('RTT(ms)')
     plt.savefig('RTT and concurrent request.pdf')
+
+
+def test_concurrency():
+    rtt = np.array([1.89, 2.035188150405884, 2.040405884, 2.150405884])
+    num = np.array([817, 4169, 4899, 8102])
+    # image 1
+    plt.title("RTT and GENI distance")
+    plt.axis([0, 9000, 0, 3000])
+    plt.plot(num, rtt*1000)
+    plt.xlabel('GENI distance(km)')
+    plt.ylabel('RTT(ms)')
+    plt.savefig('RTT and GENI distance.pdf')
 
 
 def generate_image_names():
